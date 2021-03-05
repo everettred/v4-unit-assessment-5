@@ -1,10 +1,17 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Routes from "./routes";
+import Nav from "./Components/Nav/Nav";
+import { withRouter } from "react-router-dom";
 
-function App() {
+function App(props) {
+  console.log(props);
   return (
-    <div className='App'></div>
-  )
-};
+    <div className="App">
+      <Nav />
+      {Routes}
+    </div>
+  );
+}
 
-export default App;
+export default withRouter(App);
